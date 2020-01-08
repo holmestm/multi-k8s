@@ -8,6 +8,6 @@ docker push holmestm/multi-client:$SHA
 docker push holmestm/multi-server:$SHA
 docker push holmestm/multi-worker:$SHA
 kubectl apply -f k8s
-kubectl set image deployments/client-deployments server=holmestm/multi-client:$SHA
-kubectl set image deployments/server-deployments server=holmestm/multi-server:$SHA
-kubectl set image deployments/worker-deployments server=holmestm/multi-worker:$SHA
+kubectl set image deployments/client-deployment server=holmestm/multi-client:$SHA
+kubectl set image deployments/server-deployment server=holmestm/multi-server:$SHA
+kubectl set image deployments/worker-deployment server=holmestm/multi-worker:$SHA
