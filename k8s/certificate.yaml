@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1apha2
+kind: Certificate
+metadata:
+  name: k8s-multi-com-tls
+spec:
+  secretName: k8s-multi-com
+  issueRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: k8s.gravitaz.co.uk
+  dnsNames:
+    - k8s.gravitaz.co.uk
+  acme: 
+    config:
+      - http01:
+        ingressClass: nginx
+      domains:
+        - k8s.gravitaz.co.uk
