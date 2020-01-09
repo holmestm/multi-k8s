@@ -4,7 +4,7 @@ metadata:
   name: k8s-gravitaz-tls
 spec:
   secretName: k8s-gravitaz
-  issueRef:
+  issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: k8s.gravitaz.co.uk
