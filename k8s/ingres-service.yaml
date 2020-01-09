@@ -10,8 +10,8 @@ metadata:
 spec:
   tls: 
     - hosts:
-      - k8s.gravitaz.co.uk
-    secretName: k8s-gravitaz
+        - k8s.gravitaz.co.uk
+      secretName: k8s-gravitaz
   rules: 
     - host: k8s.gravitaz.co.uk
       http:
